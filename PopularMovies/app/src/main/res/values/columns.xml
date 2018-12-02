@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- For phones and tablets with sw < 600 -->
+    <item name="num_columns" type="integer">3</item>
+</resources>

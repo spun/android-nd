@@ -1,0 +1,42 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Near me -->
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_near_me"
+        android:shortcutDisabledMessage="@string/app_shortcut_near_me_disabled"
+        android:shortcutId="rated"
+        android:shortcutLongLabel="@string/app_shortcut_near_me_long"
+        android:shortcutShortLabel="@string/app_shortcut_near_me_short">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.spundev.capstone.ui.NearMeCardsActivity"
+            android:targetPackage="com.spundev.capstone">
+            <extra
+                android:name="launch_mode"
+                android:value="near_me" />
+        </intent>
+    </shortcut>
+
+    <!-- Favorites -->
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_favorites"
+        android:shortcutDisabledMessage="@string/app_shortcut_favorites_disabled"
+        android:shortcutId="favorites"
+        android:shortcutLongLabel="@string/app_shortcut_favorites_long"
+        android:shortcutShortLabel="@string/app_shortcut_favorites_short">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.spundev.capstone.ui.FavoritesActivity"
+            android:targetPackage="com.spundev.capstone">
+            <extra
+                android:name="launch_mode"
+                android:value="favorites" />
+        </intent>
+    </shortcut>
+
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

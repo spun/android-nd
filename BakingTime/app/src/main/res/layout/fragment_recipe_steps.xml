@@ -1,0 +1,26 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.spundev.bakingtime.RecipeDetailStepsFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/steps_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/list_item_step" />
+
+        <!-- Empty message -->
+        <TextView
+            android:id="@+id/empty_steps_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/empty_steps"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

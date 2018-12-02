@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Splash activity style -->
+    <style name="AppTheme.Splash" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <!-- Home activity style -->
+    <style name="AppTheme.Home" parent="AppTheme.NoActionBar" />
+
+    <!-- My Account activity style (with enter transition) -->
+    <style name="AppTheme.AccountTheme" parent="AppTheme.NoActionBar" />
+
+    <!-- Settings activity style -->
+    <style name="SettingsTheme" parent="AppTheme.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <!-- TabLayout custom style -->
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <!-- white selected tab line -->
+        <!--<item name="tabIndicatorColor">@android:color/white</item>-->
+    </style>
+
+    <!-- lineDivider -->
+    <style name="lineDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#dadadb</item>
+    </style>
+
+    <!-- Card details play -->
+    <style name="cardPlayButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="WhiteButton">
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/anim_duration_medium"
+    android:transitionOrdering="together">
+    <slide android:slideEdge="top">
+        <targets>
+            <target android:targetId="@id/auth_app_logo" />
+        </targets>
+    </slide>
+    <slide android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@id/auth_button" />
+            <target android:targetId="@id/auth_cancel_button" />
+        </targets>
+    </slide>
+    <fade>
+        <targets>
+            <target android:targetId="@id/auth_welcome_text" />
+        </targets>
+    </fade>
+    <fade />
+</transitionSet>

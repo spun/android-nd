@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.spundev.popularmovies.adapter.ReviewsAdapter.ReviewsAdapterViewHolder.ReviewsAdapterHandlers" />
+
+        <variable
+            name="review"
+            type="com.spundev.popularmovies.model.TMDBReview" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/review_list_margin"
+        android:onClick="@{handlers::onClickReview}"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/review_author_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/review_icon_right_margin"
+            android:layout_marginRight="@dimen/review_icon_right_margin"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_comment_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/review_author_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{review.author}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                tools:text="Author" />
+
+            <TextView
+                android:id="@+id/review_content_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{review.content}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:text="Review content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

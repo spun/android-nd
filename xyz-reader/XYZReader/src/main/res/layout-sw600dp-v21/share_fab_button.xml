@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/share_fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fab_margin"
+    android:src="@drawable/avd_share"
+    app:elevation="@dimen/fab_elevation"
+    app:fabSize="normal"
+    app:layout_anchor="@id/paragraphs_wrapper"
+    app:layout_anchorGravity="bottom|right|end"
+    app:pressedTranslationZ="@dimen/fab_elevation_pressed" />
+
+    <!-- This fab uses an animated vector drawable share icon at the bottom right -->

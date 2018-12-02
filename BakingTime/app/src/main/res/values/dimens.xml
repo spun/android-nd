@@ -1,0 +1,42 @@
+<resources>
+
+
+    <!-- Recipes list -->
+    <dimen name="recipe_card_height">200dp</dimen>
+    <dimen name="recipe_card_margin">8dp</dimen>
+    <dimen name="recipe_card_radius">4dp</dimen>
+    <dimen name="recipe_card_elevation">2dp</dimen>
+
+    <dimen name="recipe_card_main_padding">16dp</dimen>
+    <dimen name="recipe_card_second_margin">8dp</dimen>
+    <dimen name="recipe_card_second_padding">8dp</dimen>
+    <dimen name="recipe_card_second_icon_padding">8dp</dimen>
+    <dimen name="recipe_card_second_text_margin">16dp</dimen>
+
+    <!-- Steps list -->
+    <dimen name="step_section_padding">16dp</dimen>
+    <dimen name="step_description_padding">16dp</dimen>
+    <dimen name="step_thumbnail_margin">16dp</dimen>
+    <dimen name="step_thumbnail_height">150dp</dimen>
+    <dimen name="step_list_item_padding">24dp</dimen>
+
+    <!-- Ingredients list -->
+    <dimen name="ingredient_item_padding">24dp</dimen>
+    <dimen name="ingredient_item_checkbox_padding">8dp</dimen>
+    <dimen name="ingredient_item_card_padding">8dp</dimen>
+
+    <!-- Widget -->
+    <!--
+    Refer to App Widget Documentation for margin information
+    http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="widget_title_padding">16dp</dimen>
+    <dimen name="widget_title_settings_icon_padding">16dp</dimen>
+    <dimen name="widget_title_logo_padding">8dp</dimen>
+    <dimen name="ingredient_widget_item_padding">16dp</dimen>
+    <dimen name="ingredient_widget_item_checkbox_padding">16dp</dimen>
+    <dimen name="ingredient_widget_config_item_padding">24dp</dimen>
+    <dimen name="step_thumbnail_border_padding">8dp</dimen>
+
+</resources>

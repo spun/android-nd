@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/new_category_dialog_padding"
+    android:paddingStart="@dimen/new_category_dialog_padding"
+    android:paddingTop="@dimen/new_category_dialog_padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_category_name" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/category_name_textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/category_name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/new_category_name"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/new_category_dialog_section_margin_top"
+        android:text="@string/new_category_color" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/category_colors_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item_category_color" />
+
+    <View
+        style="@style/lineDivider"
+        android:layout_marginTop="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/create_category_button"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/new_category_create" />
+
+        <Button
+            android:id="@+id/cancel_create_category_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/create_category_button"
+            android:layout_toStartOf="@+id/create_category_button"
+            android:text="@string/new_category_cancel" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

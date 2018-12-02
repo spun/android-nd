@@ -1,0 +1,22 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movieSelected"
+            type="boolean" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/detail_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailActivityFragment"
+        tools:showIn="@layout/activity_detail">
+
+        <include
+            android:id="@+id/movie_data"
+            layout="@layout/movie_data" />
+    </android.support.v4.widget.NestedScrollView>
+</layout>

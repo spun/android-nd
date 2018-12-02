@@ -1,0 +1,20 @@
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Near me category -->
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:key="@string/pref_near_me_key"
+        android:summary="@string/pref_description_near_me_category"
+        android:title="@string/pref_title_near_me_category" />
+
+    <!-- Voice/output language -->
+    <ListPreference
+        android:defaultValue="@string/pref_output_language_option_default"
+        android:entries="@array/pref_output_language_titles"
+        android:entryValues="@array/pref_output_language_values"
+        android:key="@string/pref_output_language_key"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_output_language" />
+
+</android.support.v7.preference.PreferenceScreen>

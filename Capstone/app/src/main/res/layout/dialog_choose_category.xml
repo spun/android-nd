@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/choose_category_title_margin"
+        android:text="@string/choose_category_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <View style="@style/lineDivider" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Empty message -->
+        <TextView
+            android:id="@+id/empty_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/choose_category_empty_padding"
+            android:text="@string/choose_category_empty"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/choose_category_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+            tools:listitem="@layout/list_item_choose_category"
+            tools:spanCount="3" />
+    </FrameLayout>
+
+    <View style="@style/lineDivider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cancel_choose_category_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/choose_category_cancel" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/category_color_circle_imageView"
+        android:layout_width="@dimen/new_category_color_picker_circle"
+        android:layout_height="@dimen/new_category_color_picker_circle"
+        android:layout_gravity="center"
+        android:contentDescription="@string/category_color_picker_content_description"
+        android:padding="8dp"
+        android:src="@drawable/category_circle_solid_select"
+        tools:tint="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/category_color_check_imageView"
+        android:layout_width="@dimen/new_category_color_picker_checkmark"
+        android:layout_height="@dimen/new_category_color_picker_checkmark"
+        android:layout_gravity="center"
+        android:contentDescription="@string/category_color_picker_content_description"
+        android:src="@drawable/ic_check_white_24dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

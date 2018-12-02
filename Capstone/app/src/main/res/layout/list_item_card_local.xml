@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:orientation="vertical">
+
+    <!-- Card main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Card text -->
+        <TextView
+            android:id="@+id/card_text_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/card_detail_text_padding_bottom"
+            android:paddingEnd="@dimen/card_detail_text_padding_right"
+            android:paddingLeft="@dimen/card_detail_text_padding_left"
+            android:paddingRight="@dimen/card_detail_text_padding_right"
+            android:paddingStart="@dimen/card_detail_text_padding_left"
+            android:paddingTop="@dimen/card_detail_text_padding_top"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="Card text." />
+
+        <!-- Show less icon -->
+        <ImageView
+            android:id="@+id/card_close_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/close_card_details_content_desc"
+            android:padding="@dimen/card_detail_close_detail_icon_padding"
+            android:src="@drawable/ic_expand_less_gray_24dp"
+            android:visibility="gone" />
+
+        <!-- Show more icon -->
+        <ImageView
+            android:id="@+id/card_open_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:contentDescription="@string/open_card_details_content_desc"
+            android:padding="@dimen/card_detail_close_detail_icon_padding"
+            android:src="@drawable/ic_expand_more_gray_24dp" />
+
+        <!-- Show less icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/close_card_details_content_desc"
+            android:padding="@dimen/card_detail_close_detail_icon_padding"
+            android:src="@drawable/ic_expand_less_gray_24dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Card actions -->
+    <!-- Main actions -->
+    <RelativeLayout
+        android:id="@+id/actions_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/card_detail_action_bar_padding_bottom"
+        android:paddingEnd="@dimen/card_detail_action_bar_padding_right"
+        android:paddingLeft="@dimen/card_detail_action_bar_padding_left"
+        android:paddingRight="@dimen/card_detail_action_bar_padding_right"
+        android:paddingStart="@dimen/card_detail_action_bar_padding_left"
+        android:paddingTop="@dimen/card_detail_action_bar_padding_top"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Show more actions -->
+        <ImageView
+            android:id="@+id/card_actions_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/close_more_actions_content_desc"
+            android:src="@drawable/ic_more_menu_gray_24dp" />
+
+        <!-- Play card button -->
+        <Button
+            android:id="@+id/card_play_button"
+            style="@style/cardPlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/ic_speaker_accent_24dp"
+            android:drawablePadding="@dimen/card_play_button_drawable_padding"
+            android:drawableStart="@drawable/ic_speaker_accent_24dp"
+            android:text="@string/card_details_play" />
+
+    </RelativeLayout>
+
+    <!-- More actions -->
+    <LinearLayout
+        android:id="@+id/more_actions_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/card_detail_action_bar_padding_bottom"
+        android:paddingTop="@dimen/card_detail_action_bar_padding_top"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Close more actions -->
+        <ImageView
+            android:id="@+id/card_close_actions_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/close_more_actions_content_desc"
+            android:src="@drawable/ic_chevron_left_gray_24dp" />
+
+        <!-- Add to favorites -->
+        <ImageView
+            android:id="@+id/card_favorite_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/add_favorites_content_desc"
+            android:src="@drawable/ic_star_yellow_24dp" />
+
+        <!-- Remove from to favorites -->
+        <ImageView
+            android:id="@+id/card_not_favorite_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/add_favorites_content_desc"
+            android:src="@drawable/ic_star_border_gray_24dp" />
+
+        <!-- Suggest card to the community -->
+        <ImageView
+            android:id="@+id/card_share_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:contentDescription="@string/suggest_card_content_desc"
+            android:src="@drawable/ic_cloud_upload_gray_24dp" />
+
+        <!-- Edit card text -->
+        <ImageView
+            android:id="@+id/card_edit_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/edit_card_content_desc"
+            android:src="@drawable/ic_edit_gray_24dp" />
+
+        <!-- Delete card -->
+        <ImageView
+            android:id="@+id/card_delete_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/delete_card_content_desc"
+            android:src="@drawable/ic_delete_forever_gray_24dp" />
+    </LinearLayout>
+
+</LinearLayout>

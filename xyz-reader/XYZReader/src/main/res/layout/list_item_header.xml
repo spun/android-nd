@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/article_header_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/header_background_color"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/detail_metabar_vert_padding"
+    android:paddingLeft="@dimen/detail_inner_horiz_margin"
+    android:paddingRight="@dimen/detail_inner_horiz_margin"
+    android:paddingTop="@dimen/detail_metabar_vert_padding">
+
+    <!-- Author -->
+    <TextView
+        android:id="@+id/author_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse" />
+
+    <!-- Published date -->
+    <TextView
+        android:id="@+id/date_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+</LinearLayout>

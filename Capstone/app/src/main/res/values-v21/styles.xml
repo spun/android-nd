@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SettingsTheme" parent="AppTheme.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <!-- My account theme -->
+    <style name="AppTheme.AccountTheme" parent="AppTheme.NoActionBar">
+        <!-- specify enter transitions-->
+        <item name="android:windowEnterTransition">@transition/my_account_enter_transition</item>
+    </style>
+
+
+</resources>

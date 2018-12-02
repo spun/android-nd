@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.spundev.popularmovies.adapter.VideosAdapter.VideosAdapterViewHolder.VideosAdapterHandlers" />
+
+        <variable
+            name="video"
+            type="com.spundev.popularmovies.model.TMDBVideo" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/video_list_margin"
+        android:layout_marginRight="@dimen/video_list_margin"
+        android:onClick="@{handlers::onClickTrailer}">
+
+        <ImageView
+            android:id="@+id/video_thumbnail_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/video_thumbnail_description"
+            app:imageUrl="@{video.thumbnailUrl}"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_play_circle_24dp" />
+
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/video_thumbnail_imageView"
+            android:layout_alignEnd="@id/video_thumbnail_imageView"
+            android:layout_alignLeft="@id/video_thumbnail_imageView"
+            android:layout_alignRight="@id/video_thumbnail_imageView"
+            android:layout_alignStart="@id/video_thumbnail_imageView"
+            android:ellipsize="end"
+            android:gravity="start|bottom"
+            android:padding="@dimen/video_text_padding"
+            android:singleLine="true"
+            android:text="@{video.name}"
+            android:textColor="@android:color/white"
+            tools:text="@tools:sample/lorem/random" />
+
+    </RelativeLayout>
+</layout>

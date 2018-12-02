@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.cloud.tools.endpoints-framework-client'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.google.cloud.tools:endpoints-framework-gradle-plugin:1.0.2'
+    }
+}
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.udacity.gradle.builditbigger"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        // multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Specifies flavor dimensions.
+    flavorDimensions "tier"
+
+    productFlavors {
+        free {
+            dimension "tier"
+            applicationId "com.udacity.gradle.builditbigger.free"
+        }
+        paid {
+            dimension "tier"
+            applicationId "com.udacity.gradle.builditbigger.paid"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    endpointsServer project(path: ':backend', configuration: 'endpoints')
+    // Support
+    def supportLibraryVersion = '27.1.1'
+    implementation "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    implementation "com.android.support:support-v4:${supportLibraryVersion}"
+    implementation "com.android.support:customtabs:${supportLibraryVersion}"
+    implementation "com.android.support:design:${supportLibraryVersion}"
+
+    implementation 'com.google.api-client:google-api-client:1.23.0'
+    implementation 'com.google.http-client:google-http-client-android:1.23.0'
+    implementation 'com.google.code.findbugs:jsr305:3.0.1'
+
+    freeImplementation 'com.google.android.gms:play-services-ads:15.0.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // My libraries
+    // implementation project(path: ':JokesProvider') // only backend
+    implementation project(path: ':jokesandroidlibrary')
+}
+

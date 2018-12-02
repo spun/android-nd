@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- At 600dp, we start using the two columns layout. Because of that
+    we now have less space for posters on the left, so we only show two. -->
+    <item name="num_columns" type="integer">2</item>
+</resources>

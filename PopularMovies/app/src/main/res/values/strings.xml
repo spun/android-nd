@@ -1,0 +1,64 @@
+<resources>
+
+    <string name="content_authority" translatable="false">com.spundev.popularmovies</string>
+    <string name="app_name">Popular Movies</string>
+
+    <!-- Main activity -->
+    <string name="action_settings">Settings</string>
+
+    <!-- Bottom nav -->
+    <string name="bottom_nav_popular">Popular</string>
+    <string name="bottom_nav_rated">Top rated</string>
+    <string name="bottom_nav_favorites">Favorites</string>
+
+    <!-- Popular/Rated/Favorites fragment -->
+    <string name="movie_poster_description">Movie poster</string>
+    <string name="empty_popular">Can\'t load popular movies</string>
+    <string name="empty_rated">Can\'t load top rated movies</string>
+    <string name="empty_favorites">You have no favorite movies</string>
+    <string name="remove_from_favorites_list">Removed from favorites</string>
+    <string name="remove_favorites_icon_description">Remove from favorites</string>
+
+    <!-- Detail activity -->
+    <string name="action_share">Share</string>
+    <string name="share_message">Watch this video of \"%1$s\"! %2$s #PopularMovies</string>
+    <string name="select_movie_empty">Select a movie from the list to see the details</string>
+    <string name="title_activity_detail">Movie details</string>
+    <string name="info_release_date">Release date</string>
+    <string name="info_vote_average">Vote average</string>
+    <string name="add_to_favorites_button">Add to favorites</string>
+    <string name="remove_favorites_button">Remove</string>
+    <string name="add_to_favorites_done">Added to favorites</string>
+    <string name="remove_from_favorites_done">Removed from favorites</string>
+    <string name="info_overview">Overview</string>
+    <string name="info_videos">Videos</string>
+    <string name="video_thumbnail_description">Video thumbnail</string>
+    <string name="info_empty_videos">No videos found</string>
+    <string name="info_reviews">Reviews</string>
+    <string name="info_empty_reviews">No reviews found</string>
+
+    <!-- Settings activity -->
+    <string name="title_activity_settings">Settings</string>
+    <!-- Theme preferences -->
+    <string name="pref_theme_key" translatable="false">appTheme</string>
+    <string name="pref_theme_label">Theme</string>
+    <string name="pref_theme_label_light">Light</string>
+    <string name="pref_theme_label_dark">Dark</string>
+    <string name="pref_theme_light" translatable="false">light</string>
+    <string name="pref_theme_dark" translatable="false">dark</string>
+
+    <!-- Launcher app shortcuts -->
+    <!-- Popular -->
+    <string name="app_shortcut_popular_long">View popular movies</string>
+    <string name="app_shortcut_popular_short">Popular</string>
+    <string name="app_shortcut_popular_disabled">Not available</string>
+    <!-- Rated -->
+    <string name="app_shortcut_rated_long">View top rated movies</string>
+    <string name="app_shortcut_rated_short">Top rated</string>
+    <string name="app_shortcut_rated_disabled">Not available</string>
+    <!-- Favorites -->
+    <string name="app_shortcut_favorites_long">View favorites movies</string>
+    <string name="app_shortcut_favorites_short">Favorites</string>
+    <string name="app_shortcut_favorites_disabled">Not available</string>
+
+</resources>

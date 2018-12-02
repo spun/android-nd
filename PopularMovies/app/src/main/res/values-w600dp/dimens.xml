@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="twoPane_card_margin">24dp</dimen>
+    <dimen name="twoPane_card_padding">24dp</dimen>
+    <!-- Movie detail activity -->
+    <dimen name="detail_padding">24dp</dimen>
+</resources>

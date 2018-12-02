@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- At 600dp, we start using two columns -->
+    <item name="num_columns" type="integer">2</item>
+</resources>

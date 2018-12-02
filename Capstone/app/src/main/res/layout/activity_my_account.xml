@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.SearchActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Sign in screen -->
+            <LinearLayout
+                android:id="@+id/account_sign_in_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/account_welcome_padding">
+
+                <ImageView
+                    android:id="@+id/auth_app_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_logo_green_196dp" />
+
+                <TextView
+                    android:id="@+id/auth_welcome_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/account_main_text_margin"
+                    android:layout_marginBottom="@dimen/account_main_text_margin"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/account_welcome_description" />
+
+                <Button
+                    android:id="@+id/auth_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/account_welcome_start_button" />
+
+                <Button
+                    android:id="@+id/auth_cancel_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/account_welcome_cancel_button" />
+            </LinearLayout>
+
+            <!-- User info screen -->
+            <LinearLayout
+                android:id="@+id/account_user_info_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/account_welcome_padding"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/account_user_photo"
+                    android:layout_width="@dimen/account_user_photo_size"
+                    android:layout_height="@dimen/account_user_photo_size"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/account_photo_content_description"
+                    android:src="@drawable/ic_logo_green_196dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/account_main_text_margin"
+                    android:layout_marginBottom="@dimen/account_main_text_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/account_signed_in_info"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        tools:text="User name" />
+
+                    <TextView
+                        android:id="@+id/account_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/account_user_name_margin"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        tools:text="User name" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/auth_sign_out_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/account_sign_out_button" />
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

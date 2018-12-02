@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Fixed top categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/favorite_category_view"
+                    layout="@layout/list_item_category_favorite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/near_me_category_view"
+                    layout="@layout/list_item_category_near_me"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/new_category_view"
+                    layout="@layout/list_item_category_new"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View style="@style/lineDivider" />
+
+            <!-- Local categories -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <!-- Empty message -->
+                <TextView
+                    android:id="@+id/empty_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/local_categories_empty_padding"
+                    android:text="@string/empty_categories"
+                    android:visibility="visible" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/local_categories_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layoutAnimation="@anim/layout_recycler_view_animation"
+                    android:layout_height="match_parent"
+                    tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    tools:listitem="@layout/list_item_category_local"
+                    tools:spanCount="3" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- Bottom action button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/local_categories_action_button_bar_padding">
+
+        <!-- Start listening button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/listen_fast_button"
+            style="@style/Widget.AppCompat.Button"
+            android:theme="@style/WhiteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_mic_accent_24dp"
+            android:drawablePadding="@dimen/tts_play_button_drawable_padding"
+            android:drawableStart="@drawable/ic_mic_accent_24dp"
+            android:text="@string/listen_fast"/>
+
+        <!-- TTS button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/quick_card_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_sms_white_24dp"
+            android:drawablePadding="@dimen/tts_play_button_drawable_padding"
+            android:drawableStart="@drawable/ic_sms_white_24dp"
+            android:text="@string/quick_card" />
+
+    </LinearLayout>
+
+</LinearLayout>

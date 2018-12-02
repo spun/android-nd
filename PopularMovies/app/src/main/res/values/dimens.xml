@@ -1,0 +1,23 @@
+<resources>
+    <!-- Favorites list fragment -->
+    <dimen name="favorite_list_item_padding">16dp</dimen>
+    <dimen name="favorite_list_delete_padding">16dp</dimen>
+
+    <!-- Movie detail activity -->
+    <dimen name="detail_padding">16dp</dimen>
+    <!-- Info section -->
+    <dimen name="detail_poster_width">150dp</dimen>
+    <dimen name="detail_poster_height">225dp</dimen>
+    <dimen name="detail_info_left_padding">16dp</dimen>
+    <dimen name="detail_section_margin">16dp</dimen>
+    <dimen name="detail_info_icon_margin">16dp</dimen>
+    <dimen name="detail_info_margin">24dp</dimen> <!-- Separation between info sections -->
+    <dimen name="detail_favoriteBtn_marginTop">48dp</dimen>
+    <dimen name="detail_favoriteBtn_drawablePadding">8dp</dimen>
+    <!-- Videos section -->
+    <dimen name="video_list_margin">8dp</dimen> <!-- Separation between videos -->
+    <dimen name="video_text_padding">4dp</dimen>
+    <!--Reviews section -->
+    <dimen name="review_list_margin">16dp</dimen> <!-- Separation between reviews -->
+    <dimen name="review_icon_right_margin">16dp</dimen>
+</resources>

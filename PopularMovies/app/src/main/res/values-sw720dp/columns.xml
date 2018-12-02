@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- On bigger tablets, the space on the left column allow us
+    to show more posters again, etc. -->
+    <item name="num_columns" type="integer">3</item>
+</resources>

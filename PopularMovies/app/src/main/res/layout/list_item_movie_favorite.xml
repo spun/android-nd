@@ -1,0 +1,57 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.spundev.popularmovies.adapter.MovieFavoritesAdapter.MovieFavoritesAdapterViewHolder.MovieFavoritesAdapterHandlers" />
+
+        <variable
+            name="movie"
+            type="com.spundev.popularmovies.model.TMDBMovie" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="@{handlers::onClickMovie}"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/favorite_list_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{movie.title}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                tools:text="Title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{movie.releaseDate}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                tools:text="0000-00-00" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/remove_favorites_icon_description"
+            android:onClick="@{handlers::onClickRemoveMovie}"
+            android:paddingLeft="@dimen/favorite_list_delete_padding"
+            android:paddingRight="@dimen/favorite_list_delete_padding"
+            android:src="@drawable/ic_delete_24dp" />
+    </LinearLayout>
+
+
+</layout>

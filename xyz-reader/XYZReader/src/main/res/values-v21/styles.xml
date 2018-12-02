@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Bacon.Translucent" parent="AppTheme.Bacon.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Activity themes -->
+    <!-- Details -->
+    <style name="AppTheme.Bacon.Detail" parent="AppTheme.Bacon.Translucent">
+        <!-- specify enter transitions-->
+        <item name="android:windowEnterTransition">@transition/details_enter_transition</item>
+    </style>
+
+</resources>

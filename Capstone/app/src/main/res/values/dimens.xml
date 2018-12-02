@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main activity -->
+
+    <!-- Categories list activity -->
+
+    <!-- Category details activity -->
+    <!-- Card details. -->
+    <dimen name="card_detail_close_detail_icon_padding">8dp</dimen>
+    <dimen name="card_detail_text_padding_top">24dp</dimen>
+    <dimen name="card_detail_text_padding_bottom">24dp</dimen>
+    <dimen name="card_detail_text_padding_left">24dp</dimen>
+    <dimen name="card_detail_text_padding_right">0dp</dimen>
+    <dimen name="card_detail_action_bar_padding_top">8dp</dimen>
+    <dimen name="card_detail_action_bar_padding_bottom">8dp</dimen>
+    <dimen name="card_detail_action_bar_padding_left">8dp</dimen>
+    <dimen name="card_detail_action_bar_padding_right">8dp</dimen>
+    <dimen name="card_play_button_drawable_padding">8dp</dimen>
+
+    <!-- TTS activity -->
+    <dimen name="tts_play_button_drawable_padding">8dp</dimen>
+
+    <!-- Edit dialog margins -->
+    <dimen name="dialog_margin">16dp</dimen>
+
+    <!-- Local cards -->
+    <dimen name="local_cards_empty_padding">48dp</dimen>
+    <dimen name="local_cards_fab_margin">16dp</dimen>
+
+    <!-- Near me -->
+    <dimen name="near_me_current_place_card_margin">16dp</dimen>
+    <dimen name="near_me_current_place_card_content_margin">16dp</dimen>
+    <dimen name="near_me_current_place_divider_margin">8dp</dimen>
+    <dimen name="near_me_current_place_edit_padding">16dp</dimen>
+    <dimen name="near_me_empty_padding">48dp</dimen>
+
+    <!-- SST -->
+    <dimen name="sst_button_padding">20dp</dimen>
+    <dimen name="sst_button_image_padding">16dp</dimen>
+
+    <!-- Edit category bottom sheet -->
+    <dimen name="edit_category_bottom_sheet_image_padding">16dp</dimen>
+
+    <!-- Category chooser -->
+    <dimen name="choose_category_title_margin">16dp</dimen>
+    <dimen name="choose_category_empty_padding">48dp</dimen>
+
+    <!-- New category dialog -->
+    <dimen name="new_category_dialog_padding">16dp</dimen>
+    <dimen name="new_category_dialog_section_margin_top">16dp</dimen>
+    <dimen name="new_category_color_picker_circle">48dp</dimen>
+    <dimen name="new_category_color_picker_checkmark">24dp</dimen>
+
+    <!-- Local categories -->
+    <dimen name="local_categories_empty_padding">48dp</dimen>
+    <dimen name="local_categories_action_button_bar_padding">4dp</dimen>
+
+    <!-- Community categories -->
+    <dimen name="community_category_padding">16dp</dimen>
+    <dimen name="community_category_text_margin_top">8dp</dimen>
+    <dimen name="community_categories_empty_padding">48dp</dimen>
+    <dimen name="community_card_action_margin">16dp</dimen>
+
+    <!-- Fixed categories buttons -->
+    <dimen name="favorite_button_padding">16dp</dimen>
+    <dimen name="favorite_button_text_margin_top">8dp</dimen>
+    <dimen name="local_category_padding">16dp</dimen>
+    <dimen name="local_category_text_margin_top">8dp</dimen>
+    <dimen name="near_me_button_padding">16dp</dimen>
+    <dimen name="near_me_button_margin_top">8dp</dimen>
+    <dimen name="new_category_button_padding">16dp</dimen>
+    <dimen name="new_category_button_text_margin_top">8dp</dimen>
+    <dimen name="choose_category_item_padding">16dp</dimen>
+    <dimen name="choose_category_item_text_margin_top">8dp</dimen>
+    <dimen name="account_welcome_padding">32dp</dimen>
+    <dimen name="account_user_name_margin">16dp</dimen>
+    <dimen name="account_user_photo_size">200dp</dimen>
+    <dimen name="widget_title_logo_padding">8dp</dimen>
+    <dimen name="widget_title_padding">16dp</dimen>
+    <dimen name="ingredient_widget_item_padding">16dp</dimen>
+    <dimen name="ingredient_widget_item_checkbox_padding">16dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="account_main_text_margin">48dp</dimen>
+
+
+</resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.spundev.capstone">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".CapstoneApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- Splash activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!-- Main activity -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme.Home" />
+
+        <!-- Local card list activity -->
+        <activity
+            android:name=".ui.LocalCardListActivity"
+            android:label="@string/title_activity_card_list_local"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+
+        <!-- Community card list activity -->
+        <activity
+            android:name=".ui.CommunityCardListActivity"
+            android:label="@string/title_activity_card_list_community"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+
+        <!-- Settings activity -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/SettingsTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+
+        <!-- TTS Activity -->
+        <activity
+            android:name=".ui.TTSActivity"
+            android:label="@string/title_tts_activity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <!-- STT Activity -->
+        <activity
+            android:name=".ui.STTActivity"
+            android:label="@string/title_activity_stt"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+
+        <!-- Near me Activity -->
+        <activity
+            android:name=".ui.NearMeCardsActivity"
+            android:label="@string/title_near_me_activity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spundev.capstone.ui.MainActivity" />
+        </activity>
+
+        <!-- Favorites Activity -->
+        <activity
+            android:name=".ui.FavoritesActivity"
+            android:label="@string/title_favorites_activity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spundev.capstone.ui.MainActivity" />
+        </activity>
+
+        <!-- Search activity -->
+        <activity
+            android:name=".ui.SearchActivity"
+            android:label="@string/title_search_activity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spundev.capstone.ui.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/search_conf" />
+        </activity>
+
+        <!-- User account Activity -->
+        <activity
+            android:name=".ui.MyAccountActivity"
+            android:label="@string/title_my_account_activity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.AccountTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spundev.capstone.ui.MainActivity" />
+        </activity>
+
+        <!-- Search provider -->
+        <provider
+            android:name=".db.SearchProvider"
+            android:authorities="@string/search_content_authority"
+            android:exported="false"
+            android:syncable="false" />
+
+        <!-- RECEIVERS -->
+        <!-- Widget provider -->
+        <receiver android:name=".widget.FavoritesWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorites_widget_info" />
+        </receiver>
+        <!-- Widget remote view -->
+        <service
+            android:name=".widget.ListWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <receiver
+            android:name=".widget.UpdateWidgetReceiver"
+            android:enabled="true" />
+
+        <!-- Places SDK api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="<maps_api_key>" />
+
+        <!-- Disable crash reporting -->
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <!-- Disable analytics reporting -->
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+    </application>
+
+</manifest>

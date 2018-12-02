@@ -1,0 +1,26 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.spundev.popularmovies.adapter.MoviePostersAdapter.MoviePostersAdapterViewHolder.MoviePostersAdapterHandlers" />
+
+        <variable
+            name="movie"
+            type="com.spundev.popularmovies.model.TMDBMovie" />
+    </data>
+
+    <ImageView
+        android:id="@+id/list_item_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/movie_poster_description"
+        android:onClick="@{handlers::onClickMovie}"
+        app:imageUrl="@{movie.posterUrl}"
+        tools:src="@drawable/placeholder" />
+
+</layout>

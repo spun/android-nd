@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="@dimen/widget_margin">
+
+
+    <LinearLayout
+        android:id="@+id/widget_title_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/widget_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_star_white_24dp"
+            android:drawablePadding="@dimen/widget_title_logo_padding"
+            android:drawableStart="@drawable/ic_star_white_24dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/widget_title_padding"
+            android:text="@string/shopping_list_widget_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/widget_title_row_divider"
+        style="@style/lineDivider"
+        android:layout_below="@+id/widget_title_row"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/widget_title_row_divider"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/favorites_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Empty message -->
+        <TextView
+            android:id="@+id/favorites_list_empty_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/empty_cards_favorite" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/community_category_padding">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/category_circle_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/category_item_content_description"
+            android:src="@drawable/category_circle_solid" />
+
+        <TextView
+            android:id="@+id/icon_letter_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+            android:textColor="@color/white"
+            tools:text="C" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/community_category_text_margin_top"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minLines="2"
+        tools:text="@tools:sample/cities" />
+
+</LinearLayout>

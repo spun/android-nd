@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="movieSelected"
+            type="boolean" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_movie_96dp"
+            android:text="@string/select_movie_empty"
+            android:visibility="@{movieSelected != true ? View.VISIBLE : View.GONE}" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/detail_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{movieSelected == true ? View.VISIBLE : View.GONE}"
+            tools:context=".DetailActivityFragment"
+            tools:showIn="@layout/activity_detail"
+            tools:visibility="gone">
+
+            <!-- Fix bug on CardView bottom shadow inside scrollable views -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/twoPane_card_margin"
+                    android:padding="@dimen/twoPane_card_padding">
+
+                    <include
+                        android:id="@+id/movie_data"
+                        layout="@layout/movie_data" />
+
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.spundev.bakingtime.adapter.RecipesAdapter.RecipesAdapterViewHolder.RecipesAdapterHandlers" />
+
+        <variable
+            name="recipe"
+            type="com.spundev.bakingtime.model.Recipe" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:onClick="@{handlers::onClickRecipe}"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/video_thumbnail_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/recipe_item_image_description"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{recipe.image}"
+                tools:src="@drawable/recipe_img_placeholder" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_shape" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/video_thumbnail_imageView"
+            android:layout_alignEnd="@id/video_thumbnail_imageView"
+            android:layout_alignLeft="@id/video_thumbnail_imageView"
+            android:layout_alignRight="@id/video_thumbnail_imageView"
+            android:layout_alignStart="@id/video_thumbnail_imageView"
+            android:orientation="vertical"
+            android:padding="@dimen/recipe_card_main_padding">
+
+            <TextView
+                android:id="@+id/name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingBottom="@dimen/recipe_card_second_margin"
+                android:singleLine="true"
+                android:text="@{recipe.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white"
+                tools:text="@tools:sample/lorem" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ingredients_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_ingredients_white_16dp"
+                    android:drawablePadding="@dimen/recipe_card_second_icon_padding"
+                    android:drawableStart="@drawable/ic_ingredients_white_16dp"
+                    android:text="@{Integer.toString(recipe.numIngredients)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    tools:text="@tools:sample/lorem" />
+
+                <TextView
+                    android:id="@+id/steps_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/recipe_card_second_text_margin"
+                    android:layout_marginRight="@dimen/recipe_card_second_text_margin"
+                    android:drawableLeft="@drawable/ic_steps_white_16dp"
+                    android:drawablePadding="@dimen/recipe_card_second_icon_padding"
+                    android:drawableStart="@drawable/ic_steps_white_16dp"
+                    android:text="@{Integer.toString(recipe.numSteps)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    tools:text="@tools:sample/lorem" />
+
+                <TextView
+                    android:id="@+id/servings_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_servings_white_16dp"
+                    android:drawablePadding="@dimen/recipe_card_second_icon_padding"
+                    android:drawableStart="@drawable/ic_servings_white_16dp"
+                    android:text="@{Integer.toString(recipe.servings)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    tools:text="@tools:sample/lorem" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

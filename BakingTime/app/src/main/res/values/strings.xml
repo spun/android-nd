@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="content_authority_provider" translatable="false">com.spundev.bakingtime.provider</string>
+    <string name="app_name">BakingTime</string>
+
+    <!-- Main activity -->
+    <string name="action_search">Search</string>
+    <string name="empty_recipes_message">No recipes found</string>
+    <string name="empty_recipes_button">Check now</string>
+
+    <!-- RecipeDetailActivity -->
+    <string name="empty_steps">No steps found</string>
+    <string name="empty_ingredients">No ingredients found</string>
+
+    <!-- StepDetailActivity -->
+    <string name="title_activity_step_detail">Step details</string>
+    <string name="previous_step_detail">back</string>
+    <string name="next_step_detail">next</string>
+
+    <!-- Widget -->
+    <string name="title_activity_shopping_widget">Configure</string>
+    <string name="shopping_list_widget_title">Shopping list</string>
+    <string name="ingredients_info_card_title">Shopping list</string>
+    <string name="ingredients_info_card_text">Use this list to keep track of the ingredients that you have or need to buy the next time you go shopping.</string>
+    <string name="ingredients_info_card_action_button">Close</string>
+
+    <!-- Expo player button content description -->
+    <string name="exo_player_button_rew" tools:keep="@string/exo_player_button_rew">Rewind</string>
+    <string name="exo_player_button_repeat" tools:keep="@string/exo_player_button_repeat">Repeat</string>
+    <string name="exo_player_button_play" tools:keep="@string/exo_player_button_play">Play</string>
+    <string name="exo_player_button_pause" tools:keep="@string/exo_player_button_pause">Pause</string>
+    <string name="exo_player_button_ffwd" tools:keep="@string/exo_player_button_ffwd">Fast forward</string>
+    <string name="exo_player_button_full" tools:keep="@string/exo_player_button_full">Fullscreen</string>
+    <string name="recipe_item_image_description">Recipe image</string>
+    <string name="widget_options_image_description">Change recipe</string>
+    <string name="widget_ingredient_checkbox_description">Change availability</string>
+</resources>

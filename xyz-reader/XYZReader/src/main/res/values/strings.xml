@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">XYZ Reader</string>
+
+    <string name="action_share">Share</string>
+    <string name="thumbnail_content_description">Article image</string>
+
+</resources>

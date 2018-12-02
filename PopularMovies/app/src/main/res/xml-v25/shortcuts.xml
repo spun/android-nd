@@ -1,0 +1,58 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_favorites"
+        android:shortcutDisabledMessage="@string/app_shortcut_favorites_disabled"
+        android:shortcutId="favorites"
+        android:shortcutLongLabel="@string/app_shortcut_favorites_long"
+        android:shortcutShortLabel="@string/app_shortcut_favorites_short">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.spundev.popularmovies.MainActivity"
+            android:targetPackage="com.spundev.popularmovies">
+            <extra
+                android:name="launch_mode"
+                android:value="favorites" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_rated"
+        android:shortcutDisabledMessage="@string/app_shortcut_rated_disabled"
+        android:shortcutId="rated"
+        android:shortcutLongLabel="@string/app_shortcut_rated_long"
+        android:shortcutShortLabel="@string/app_shortcut_rated_short">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.spundev.popularmovies.MainActivity"
+            android:targetPackage="com.spundev.popularmovies">
+            <extra
+                android:name="launch_mode"
+                android:value="rated" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_popular"
+        android:shortcutDisabledMessage="@string/app_shortcut_popular_disabled"
+        android:shortcutId="popular"
+        android:shortcutLongLabel="@string/app_shortcut_popular_long"
+        android:shortcutShortLabel="@string/app_shortcut_popular_short">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.spundev.popularmovies.MainActivity"
+            android:targetPackage="com.spundev.popularmovies">
+            <extra
+                android:name="launch_mode"
+                android:value="popular" />
+        </intent>
+    </shortcut>
+
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.google.guava:guava:23.0'
+        classpath 'com.android.tools.build:gradle:3.1.4'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+// My Gradle tasks
+task runTestsWithBackend(dependsOn: ":backend:appengineStart") {
+    group 'Custom tasks'
+    description 'Start AppEngine backend, run connected tests and stop backend'
+
+    doLast {
+        println 'AppEngine backend started'
+    }
+}
+
+
+task runConnectedTests(dependsOn: ":app:connectedAndroidTest") {
+    doLast {
+        println 'Connected tests completed'
+    }
+}
+
+task stopAppEngineBackend(dependsOn: ":backend:appengineStop") {
+    doLast {
+        println 'AppEngine backend stopped'
+    }
+}
+
+// Order of execution
+runTestsWithBackend.finalizedBy runConnectedTests
+runConnectedTests.finalizedBy stopAppEngineBackend

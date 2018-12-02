@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Empty message -->
+    <TextView
+        android:id="@+id/empty_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/community_categories_empty_padding"
+        android:text="@string/community_empty_categories" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/community_categories_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/layout_recycler_view_animation"
+        tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+        tools:listitem="@layout/list_item_category_community"
+        tools:spanCount="3" />
+
+</FrameLayout>
